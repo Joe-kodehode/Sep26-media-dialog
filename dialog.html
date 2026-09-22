@@ -24,6 +24,13 @@
         <p>Click the button to open the dialog.</p>
 
         <!-- basic dialog demo goes here -->
+        <dialog id="my-dialog">
+          <h3>Hello!</h3>
+          <p>This is a dialog box</p>
+          <button id="close-dialog">Close</button>
+        </dialog>
+
+        <button id="open-dialog">Open Dialog</button>
       </section>
 
       <!-- FORM INSIDE DIALOG -->
@@ -32,6 +39,17 @@
         <p>Dialogs can also contain forms and other content.</p>
 
         <!-- dialog with form demo goes here -->
+        <dialog id="form-dialog">
+          <h3>Contact Form</h3>
+          <form action="">
+            <label for="message">Enter your message</label>
+            <textarea name="message" id="message"></textarea>
+          </form>
+
+          <button type="submit" id="close-form">Send and close</button>
+        </dialog>
+
+        <button id="open-form-dialog">Open Form</button>
       </section>
 
       <!-- EXPLANATION -->
@@ -82,10 +100,16 @@
       // Get the second dialog and its open button
       let formDialog = document.getElementById("form-dialog");
       let openFormDialogButton = document.getElementById("open-form-dialog");
+      let closeFormDialogButton = document.getElementById("close-form");
 
       // Open the second dialog when the button is clicked
       openFormDialogButton.addEventListener("click", function () {
         formDialog.showModal();
+      });
+
+      // Close the second dialog when the button is clicked
+      closeFormDialogButton.addEventListener("click", function () {
+        formDialog.close();
       });
     </script>
   </body>

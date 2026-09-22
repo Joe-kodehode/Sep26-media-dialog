@@ -84,6 +84,15 @@ button {
 /* ========================= */
 
 /* Dialog styling goes here */
+dialog {
+  padding: 20px;
+  border: none;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  /* Don't use flexbox to center the dialog, as the parent is the body */
+}
 
 /* ========================= */
 /* SUMMARY                   */
